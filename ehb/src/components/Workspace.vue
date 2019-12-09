@@ -1,20 +1,15 @@
 <template>
-  <v-app>
-    <Bar />
-    <v-content>
-      <Table />
-    </v-content>
-  </v-app>
+  <v-content>
+    <Table />
+  </v-content>
 </template>
 
 <script>
-import Bar from "./components/Bar";
 import Table from "./components/Table";
 
 export default {
-  name: "App",
+  name: "Workspace",
   components: {
-    Bar,
     Table
   },
   data: () => ({

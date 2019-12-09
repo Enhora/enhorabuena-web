@@ -11,12 +11,18 @@
     scroll-target="#scrolling-techniques-4"
   >
     <template v-slot:img="{ props }">
-      <v-img v-bind="props" gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"></v-img>
+      <v-img
+        v-bind="props"
+        gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"
+      ></v-img>
     </template>
 
     <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-    <v-toolbar-title>Enhorabuena</v-toolbar-title>
+    <v-toolbar-title>
+      Enhorabuena
+      <v-icon>mdi-clock-outline</v-icon>
+    </v-toolbar-title>
 
     <v-spacer></v-spacer>
 
@@ -47,6 +53,8 @@
         <v-tab>Inicio</v-tab>
         <v-tab>Ventas</v-tab>
         <v-tab>Gastos</v-tab>
+        <v-tab>Stock</v-tab>
+        <v-tab>Proveedores</v-tab>
       </v-tabs>
     </template>
   </v-app-bar>
@@ -57,10 +65,9 @@ export default {
   name: "Bar",
   data: () => ({
     items: [
-      { title: "Click Me" },
-      { title: "Click Me" },
-      { title: "Click Me" },
-      { title: "Click Me 2" }
+      { title: "Usuario" },
+      { title: "Configuración" },
+      { title: "Salir" }
     ]
   })
 };
