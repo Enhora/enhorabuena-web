@@ -17,8 +17,8 @@
 </template>
 
 <script>
-import OutcomesForm from "./OutcomesForm";
-import SalesForm from "./SalesForm";
+import OutcomesForm from "../components/OutcomesForm";
+import SalesForm from "../components/SalesForm";
 
 export default {
   name: "App",

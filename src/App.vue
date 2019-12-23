@@ -5,7 +5,7 @@
       <v-container class="fill-height" fluid>
         <v-row align="center" justify="center">
           <v-col cols="12">
-            <MainMenu />
+            <router-view />
           </v-col>
         </v-row>
       </v-container>
@@ -15,13 +15,11 @@
 
 <script>
 import Bar from "./components/Bar";
-import MainMenu from "./components/MainMenu";
 
 export default {
   name: "App",
   components: {
     Bar,
-    MainMenu
   },
   data: () => ({
     //
