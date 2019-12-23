@@ -50,11 +50,11 @@
 
     <template v-slot:extension>
       <v-tabs align-with-title background-color="transparent">
-        <v-tab>Inicio</v-tab>
-        <v-tab>Ventas</v-tab>
-        <v-tab>Gastos</v-tab>
-        <v-tab>Stock</v-tab>
-        <v-tab>Proveedores</v-tab>
+        <v-tab to="/">Inicio</v-tab>
+        <v-tab to="/ventas">Ventas</v-tab>
+        <v-tab to="/gastos">Gastos</v-tab>
+        <v-tab to="/stock">Stock</v-tab>
+        <v-tab to="/proveedores">Proveedores</v-tab>
       </v-tabs>
     </template>
   </v-app-bar>
