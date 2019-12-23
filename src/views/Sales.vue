@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <v-row no-gutters align="top" justify="space-around">
+    <v-row no-gutters justify="space-around">
       <v-col cols="12" sm="12" lg="5">
         <p class="headline text-center">Agregar venta</p>
         <SalesForm />

@@ -8,7 +8,6 @@
     prominent
     src="https://potterandvaughn.com/files/2019/05/sock_wall.jpg?w=1060&h=795&a=t"
     fade-img-on-scroll
-    scroll-target="#scrolling-techniques-4"
   >
     <template v-slot:img="{ props }">
       <v-img

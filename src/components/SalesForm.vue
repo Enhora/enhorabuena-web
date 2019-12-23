@@ -90,6 +90,7 @@ export default {
     categories: ["Item 1", "Item 2", "Item 3", "Item 4"],
     fees: ["Item 1", "Item 2", "Item 3", "Item 4"],
     payMethods: ["Item 1", "Item 2", "Item 3", "Item 4"],
+    payMethod: null,
     checkbox: false
   }),
 
