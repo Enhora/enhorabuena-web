@@ -9,25 +9,66 @@
       <v-divider class="mx-4" inset vertical></v-divider>
 
       <v-col cols="12" sm="12" lg="5">
-        <p class="headline text-center">Agregar gasto</p>
-        <OutcomesForm />
+        <p class="headline text-center">Ultimas ventas</p>
+        <TxTable :items="desserts" />
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
-import OutcomesForm from "../components/OutcomesForm";
 import SalesForm from "../components/SalesForm";
+import TxTable from "../components/TxTable";
 
 export default {
   name: "App",
   components: {
-    OutcomesForm,
-    SalesForm
+    SalesForm,
+    TxTable
   },
   data: () => ({
-    //
+    desserts: [
+      {
+        name: 'Frozen Yogurt',
+        calories: 159,
+      },
+      {
+        name: 'Ice cream sandwich',
+        calories: 237,
+      },
+      {
+        name: 'Eclair',
+        calories: 262,
+      },
+      {
+        name: 'Cupcake',
+        calories: 305,
+      },
+      {
+        name: 'Gingerbread',
+        calories: 356,
+      },
+      {
+        name: 'Jelly bean',
+        calories: 375,
+      },
+      {
+        name: 'Lollipop',
+        calories: 392,
+      },
+      {
+        name: 'Honeycomb',
+        calories: 408,
+      },
+      {
+        name: 'Donut',
+        calories: 452,
+      },
+      {
+        name: 'KitKat',
+        calories: 518,
+      },
+    ],
   })
 };
 </script>
