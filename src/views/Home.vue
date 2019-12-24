@@ -1,32 +1,42 @@
 <template>
-  <div>
-    <h1>Hola pandoro</h1>
-    <h2>La hora es: {{time}}</h2>
-    <h3>La fecha es: {{date}}</h3>
-  </div>
+  <v-container class="fill-height" fluid>
+    <v-row align="center" justify="center">
+      <v-col cols="12" sm="8" md="4">
+        <v-container fluid>
+          <p class="font-weight-light display-1 text-center">{{ time }}</p>
+          <p class="font-weight-light text-center">{{ date }}</p>
+          <salesCard />
+        </v-container>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
-import { format } from 'date-fns'
+import { format } from "date-fns";
+import salesCard from "../components/SalesCard";
 
 export default {
+  components: {
+    salesCard
+  },
   data: () => ({
-    time: format(new Date(), 'HH:mm:ss'),
+    time: format(new Date(), "HH:mm:ss"),
     timeInterval: null,
-    date: format(new Date(), 'dd/MM/yy'),
+    date: format(new Date(), "dd/MM/yy")
   }),
   methods: {
-    getTime () {
-      return format(new Date(), 'HH:mm:ss')
+    getTime() {
+      return format(new Date(), "HH:mm:ss");
     }
   },
-  created () {
+  created() {
     this.timeInterval = setInterval(() => {
-      this.time = this.getTime()
-    }, 1000)
+      this.time = this.getTime();
+    }, 1000);
   },
-  destroyed () {
-    clearInterval(this.timeInterval)
+  destroyed() {
+    clearInterval(this.timeInterval);
   }
-}
+};
 </script>

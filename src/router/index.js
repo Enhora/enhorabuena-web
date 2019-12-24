@@ -4,6 +4,7 @@ import Home from '../views/Home'
 import Sales from '../views/Sales'
 import Expenses from '../views/Expenses'
 import NotFound from '../views/404'
+import Providers from '../views/Providers'
 
 Vue.use(VueRouter);
 
@@ -19,6 +20,10 @@ const routes = [
   {
     path: '/gastos',
     component: Expenses
+  },
+  {
+    path: '/proveedores',
+    component: Providers
   },
   {
     path: '*',
