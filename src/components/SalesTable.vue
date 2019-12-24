@@ -1,5 +1,11 @@
 <template>
-  <v-data-table :headers="headers" :items="articulos" class="elevation-1" show-expand item-key="name">
+  <v-data-table
+    :headers="headers"
+    :items="articles"
+    class="elevation-1"
+    show-expand
+    item-key="name"
+  >
     <template v-slot:top>
       <v-toolbar flat>
         <v-toolbar-title>Expandable Table</v-toolbar-title>
@@ -29,91 +35,102 @@ export default {
           value: "name"
         },
         { text: "Stock", value: "stock" },
-        { text: "Precio ($)", value: "precio" },
-        { text: "Metodo de pago", value: "metodoDePago" },
-        { text: "Cuotas", value: "cuotas" },
-        { text: "Descuento (%)", value: "descuento" }
+        { text: "Precio ($)", value: "price" },
+        { text: "Metodo de pago", value: "payMethod" },
+        { text: "Cuotas", value: "fees" },
+        { text: "Descuento (%)", value: "discount" },
+        { text: "Estado", value: "status" }
       ],
-      articulos: [
+      articles: [
         {
-          name: "Nombre A",
+          name: "Medias soquete invisible",
           stock: 159,
-          precio: 260,
-          metodoDePago: "Efectivo",
-          cuotas: 0,
-          descuento: "15%"
+          price: 260,
+          payMethod: "Efectivo",
+          fees: 0,
+          discount: "15%",
+          status: "Pago"
         },
         {
-          name: "Nombre B",
+          name: "Media caña alta",
           stock: 237,
-          precio: 190,
-          metodoDePago: "Efectivo",
-          cuotas: 0,
-          descuento: "10%"
+          price: 190,
+          payMethod: "Efectivo",
+          fees: 0,
+          discount: "10%",
+          status: "Pago"
         },
         {
-          name: "Nombre C",
+          name: "Media caña corta",
           stock: 262,
-          precio: 1634.0,
-          metodoDePago: "Efectivo",
-          cuotas: 0,
-          descuento: "10%"
+          price: 1634.0,
+          payMethod: "Efectivo",
+          fees: 0,
+          discount: "10%",
+          status: "Pago"
         },
         {
-          name: "Nombre D",
+          name: "Boxer hombre",
           stock: 305,
-          precio: 3344.0,
-          metodoDePago: "Débito",
-          cuotas: 0,
-          descuento: "10%"
+          price: 3344.0,
+          payMethod: "Débito",
+          fees: 0,
+          discount: "10%",
+          status: "Pago"
         },
         {
-          name: "Nombre E",
+          name: "Boxer niño",
           stock: 356,
-          precio: 1634.0,
-          metodoDePago: "Crédito",
-          cuotas: 3,
-          descuento: "0%"
+          price: 1634.0,
+          payMethod: "Crédito",
+          fees: 3,
+          discount: "0%",
+          status: "Pago"
         },
         {
-          name: "Nombre F",
+          name: "Slip hombre",
           stock: 3759.0,
-          precio: 500.0,
-          metodoDePago: "Débito",
-          cuotas: 0,
-          descuento: "0%"
+          price: 500.0,
+          payMethod: "Débito",
+          fees: 0,
+          discount: "0%",
+          status: "Pago"
         },
         {
-          name: "Nombre G",
+          name: "Slip niño",
           stock: 392,
-          precio: 1000,
-          metodoDePago: "Débito",
-          cuotas: 0,
-          descuento: "10%"
+          price: 1000,
+          payMethod: "Débito",
+          fees: 0,
+          discount: "10%",
+          status: "Pago"
         },
         {
-          name: "Nombre H",
+          name: "Sombrero Bowler",
           stock: 408,
-          precio: 302,
-          metodoDePago: "Débito",
-          cuotas: 0,
-          descuento: "45%"
+          price: 302,
+          payMethod: "Débito",
+          fees: 0,
+          discount: "45%",
+          status: "Pago"
         },
         {
-          name: "Nombre I",
+          name: "Sombrero Fedora",
           stock: 4523.0,
-          precio: 250.6,
-          metodoDePago: "Crédito",
-          cuotas: 6,
-          descuento: "20%"
+          price: 250.6,
+          payMethod: "Crédito",
+          fees: 6,
+          discount: "20%",
+          status: "Pago"
         },
         {
-          name: "Nombre J",
+          name: "Sombrero bombin",
           stock: 518,
-          precio: 1426.0,
-          metodoDePago: "Crédito",
-          cuotas: 6,
-          descuento: "0%"
+          price: 1426.0,
+          payMethod: "Crédito",
+          fees: 6,
+          discount: "0%",
+          status: "Pago"
         }
       ]
     };

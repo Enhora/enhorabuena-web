@@ -9,15 +9,12 @@
     fade-img-on-scroll
   >
     <template v-slot:img="{ props }">
-      <v-img
-        v-bind="props"
-        gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"
-      ></v-img>
+      <v-img v-bind="props" gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"></v-img>
     </template>
 
     <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-    <v-toolbar-title>
+    <v-toolbar-title class="display-1">
       Enhorabuena
       <v-icon>mdi-clock-outline</v-icon>
     </v-toolbar-title>
@@ -31,6 +28,7 @@
         <v-tab to="/gastos">Gastos</v-tab>
         <v-tab to="/stock">Stock</v-tab>
         <v-tab to="/proveedores">Proveedores</v-tab>
+        <v-tab to="/calendario">Calendario</v-tab>
       </v-tabs>
     </template>
   </v-app-bar>

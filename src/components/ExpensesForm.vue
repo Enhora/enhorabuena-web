@@ -20,6 +20,16 @@
     ></v-text-field>
 
     <v-select
+      v-model="status"
+      :items="statuses"
+      :error-messages="statusError"
+      label="Estado"
+      required
+      @change="$v.status.$touch()"
+      @blur="$v.status.$touch()"
+    ></v-select>
+
+    <v-select
       v-model="category"
       :items="categories"
       :error-messages="categoryErrors"
@@ -54,6 +64,7 @@ export default {
     article: { required, maxLength: maxLength(20) },
     price: { required },
     category: { required },
+    status: { required },
     checkbox: {
       checked(val) {
         return val;
@@ -64,18 +75,21 @@ export default {
   data: () => ({
     article: "",
     price: "",
-    category: null,
+    category: "",
     categories: ["Item 1", "Item 2", "Item 3", "Item 4"],
+    statuses: ["Pagado", "Pago parcial", "Impago"], // default pagado
+    status: "",
     checkbox: false
   }),
 
   computed: {
+    /*
     checkboxErrors() {
       const errors = [];
       if (!this.$v.checkbox.$dirty) return errors;
       !this.$v.checkbox.checked && errors.push("You must agree to continue!");
       return errors;
-    },
+    },*/
     categoryErrors() {
       const errors = [];
       if (!this.$v.category.$dirty) return errors;
@@ -97,6 +111,13 @@ export default {
       if (!this.$v.price.$dirty) return errors;
       !this.$v.price.required && errors.push("Es necesario ingresar un valor.");
       return errors;
+    },
+    statusError() {
+      const errors = [];
+      if (!this.$v.status.$dirty) return errors;
+      !this.$v.status.required &&
+        errors.push("Es necesario ingresar un estado.");
+      return errors;
     }
   },
 
@@ -108,7 +129,8 @@ export default {
       this.$v.$reset();
       this.article = "";
       this.price = "";
-      this.category = null;
+      this.status = "";
+      this.category = "";
       this.checkbox = false;
     }
   }

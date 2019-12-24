@@ -7,7 +7,6 @@
           <p class="font-weight-light text-center">
             <v-icon large>mdi-cancel</v-icon>
           </p>
-          <salesCard />
         </v-container>
       </v-col>
     </v-row>

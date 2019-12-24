@@ -97,24 +97,25 @@ export default {
   data: () => ({
     article: "",
     price: "",
-    category: '',
+    category: "",
     categories: ["Item 1", "Item 2", "Item 3", "Item 4"],
     fees: ["Item 1", "Item 2", "Item 3", "Item 4"],
-    fee: '',
+    fee: "",
     payMethods: ["Item 1", "Item 2", "Item 3", "Item 4"],
-    statuses: ['Pagado', 'Pago parcial', 'Impago'], // default pagado
-    status: '',
-    payMethod: '',
+    statuses: ["Pagado", "Pago parcial", "Impago"], // default pagado
+    status: "",
+    payMethod: "",
     checkbox: false
   }),
 
   computed: {
+    /*
     checkboxErrors() {
       const errors = [];
       if (!this.$v.checkbox.$dirty) return errors;
       !this.$v.checkbox.checked && errors.push("You must agree to continue!");
       return errors;
-    },
+    },*/
     categoryErrors() {
       const errors = [];
       if (!this.$v.category.$dirty) return errors;
@@ -153,7 +154,8 @@ export default {
     statusError() {
       const errors = [];
       if (!this.$v.status.$dirty) return errors;
-      !this.$v.status.required && errors.push("Es necesario ingresar un valor.");
+      !this.$v.status.required &&
+        errors.push("Es necesario ingresar un estado.");
       return errors;
     }
   },
@@ -166,10 +168,10 @@ export default {
       this.$v.$reset();
       this.article = "";
       this.price = "";
-      this.category = '';
-      this.payMethod = '';
-      this.fee = '';
-      this.status = '';
+      this.category = "";
+      this.payMethod = "";
+      this.fee = "";
+      this.status = "";
       this.checkbox = false;
     }
   }

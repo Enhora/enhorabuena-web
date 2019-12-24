@@ -7,32 +7,32 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from "axios";
 
 export default {
   data: () => ({
-    temperature: '-',
+    temperature: "-",
     time: null,
     precipitation: false,
-    text: '',
+    text: ""
   }),
-  async created () {
-    const buenosAires = 7894
-    const saintMichael = 7628
-    const url = `http://dataservice.accuweather.com/currentconditions/v1/${saintMichael}`
+  async created() {
+    const buenosAires = 7894;
+    const saintMichael = 7628;
+    const url = `http://dataservice.accuweather.com/currentconditions/v1/${saintMichael}`;
     const res = await axios.get(url, {
       params: {
-        apikey: 'Jtrt6SeGTfZGTNuQlA6VTOIUWFdYcenA',
-        language: 'es-AR'
+        apikey: "Jtrt6SeGTfZGTNuQlA6VTOIUWFdYcenA",
+        language: "es-AR"
       }
-    })
+    });
     // const [obj] = res.data
-    const obj = res.data[0]
-    this.temperature = obj.Temperature.Metric.Value
-    this.time = obj.LocalObservationDateTime
-    this.text = obj.WeatherText
-    this.precipitation = obj.HasPrecipitation
-  },
+    const obj = res.data[0];
+    this.temperature = obj.Temperature.Metric.Value;
+    this.time = obj.LocalObservationDateTime;
+    this.text = obj.WeatherText;
+    this.precipitation = obj.HasPrecipitation;
+  }
   // created () {
   //   const buenosAires = 7894
   //   const saintMichael = 7628
@@ -51,5 +51,5 @@ export default {
   //     this.precipitation = obj.HasPrecipitation
   //   })
   // }
-}
+};
 </script>

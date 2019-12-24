@@ -9,6 +9,7 @@ import SalesDetail from '../views/SalesDetail'
 import Stock from '../views/Stock'
 import StockDetail from '../views/StockDetail'
 import ExpensesDetail from '../views/ExpensesDetail'
+import Calendar from '../views/Calendar'
 
 Vue.use(VueRouter);
 
@@ -44,6 +45,10 @@ const routes = [
   {
     path: '/stock/detalle',
     component: StockDetail
+  },
+  {
+    path: '/calendario',
+    component: Calendar
   },
   {
     path: '*',

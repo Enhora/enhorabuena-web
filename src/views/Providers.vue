@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import OutcomesForm from "../components/OutcomesForm";
+import ExpensesForm from "../components/ExpensesForm";
 import ProvidersList from "../components/ProvidersList";
 import ProviderCard from "../components/ProviderCard";
 

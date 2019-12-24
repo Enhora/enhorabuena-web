@@ -15,7 +15,7 @@
             <v-icon>mdi-arrow-top-right</v-icon>
           </v-btn>
         </p>
-        <TxTable :items="desserts" />
+        <TxTable :items="articles" />
       </v-col>
     </v-row>
   </v-container>
@@ -32,46 +32,66 @@ export default {
     TxTable
   },
   data: () => ({
-    desserts: [
+    articles: [
       {
-        name: "Frozen Yogurt",
-        calories: 159
+        name: "Medias soquete invisible",
+        stock: 159,
+        price: 260,
+        status: "Pago"
       },
       {
-        name: "Ice cream sandwich",
-        calories: 237
+        name: "Media caña alta",
+        stock: 237,
+        price: 190,
+        status: "Pago"
       },
       {
-        name: "Eclair",
-        calories: 262
+        name: "Media caña corta",
+        stock: 262,
+        price: 1634.0,
+        status: "Pago"
       },
       {
-        name: "Cupcake",
-        calories: 305
+        name: "Boxer hombre",
+        stock: 305,
+        price: 3344.0,
+        status: "Pago"
       },
       {
-        name: "Gingerbread",
-        calories: 356
+        name: "Boxer niño",
+        stock: 356,
+        price: 1634.0,
+        status: "Pago"
       },
       {
-        name: "Jelly bean",
-        calories: 375
+        name: "Slip hombre",
+        stock: 3759.0,
+        price: 500.0,
+        status: "Pago"
       },
       {
-        name: "Lollipop",
-        calories: 392
+        name: "Slip niño",
+        stock: 392,
+        price: 1000,
+        status: "Pago"
       },
       {
-        name: "Honeycomb",
-        calories: 408
+        name: "Sombrero Bowler",
+        stock: 408,
+        price: 302,
+        status: "Pago"
       },
       {
-        name: "Donut",
-        calories: 452
+        name: "Sombrero Fedora",
+        stock: 4523.0,
+        price: 250.6,
+        status: "Pago"
       },
       {
-        name: "KitKat",
-        calories: 518
+        name: "Sombrero bombin",
+        stock: 518,
+        price: 1426.0,
+        status: "Pago"
       }
     ]
   })

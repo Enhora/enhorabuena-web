@@ -34,55 +34,55 @@ export default {
       },
       { divider: true, inset: true },
       {
-        name: "Nombre",
+        name: "Nombre a",
         lastname: "Apellido",
         company: "Empresa"
       },
       { divider: true, inset: true },
       {
-        name: "Nombre",
+        name: "Nombre b",
         lastname: "Apellido",
         company: "Empresa"
       },
       { divider: true, inset: true },
       {
-        name: "Nombre",
+        name: "Nombre c",
         lastname: "Apellido",
         company: "Empresa"
       },
       { divider: true, inset: true },
       {
-        name: "Nombre",
+        name: "Nombre d",
         lastname: "Apellido",
         company: "Empresa"
       },
       { divider: true, inset: true },
       {
-        name: "Nombre",
+        name: "Nombre e",
         lastname: "Apellido",
         company: "Empresa"
       },
       { divider: true, inset: true },
       {
-        name: "Nombre",
+        name: "Nombre f",
         lastname: "Apellido",
         company: "Empresa"
       },
       { divider: true, inset: true },
       {
-        name: "Nombre",
+        name: "Nombre g",
         lastname: "Apellido",
         company: "Empresa"
       },
       { divider: true, inset: true },
       {
-        name: "Nombre",
+        name: "Nombre h",
         lastname: "Apellido",
         company: "Empresa"
       },
       { divider: true, inset: true },
       {
-        name: "Nombre",
+        name: "Nombre i",
         lastname: "Apellido",
         company: "Empresa"
       }

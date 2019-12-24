@@ -3,7 +3,7 @@
     <v-row no-gutters justify="space-around">
       <v-col cols="12" sm="12" lg="5">
         <p class="headline text-center">Agregar gasto</p>
-        <OutcomesForm />
+        <ExpensesForm />
       </v-col>
 
       <v-divider class="mx-4" inset vertical></v-divider>
@@ -15,35 +15,38 @@
             <v-icon>mdi-arrow-top-right</v-icon>
           </v-btn>
         </p>
-        <TxTable :items="desserts" />
+        <TxTable :items="expenses" />
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
-import OutcomesForm from "../components/OutcomesForm";
+import ExpensesForm from "../components/ExpensesForm";
 import TxTable from "../components/TxTable";
 
 export default {
   name: "App",
   components: {
-    OutcomesForm,
+    ExpensesForm,
     TxTable
   },
   data: () => ({
-    desserts: [
+    expenses: [
       {
-        name: "Frozen Yogurt",
-        calories: 159
+        name: "Talonario",
+        price: 159,
+        status: "Pago"
       },
       {
-        name: "Ice cream sandwich",
-        calories: 237
+        name: "Lapiceras",
+        price: 237,
+        status: "Pago"
       },
       {
-        name: "Pandorito",
-        calories: 262
+        name: "Aromatizador",
+        price: 262,
+        status: "Pago"
       }
     ]
   })
