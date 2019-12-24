@@ -8,6 +8,7 @@ import Providers from '../views/Providers'
 import SalesDetail from '../views/SalesDetail'
 import Stock from '../views/Stock'
 import StockDetail from '../views/StockDetail'
+import ExpensesDetail from '../views/ExpensesDetail'
 
 Vue.use(VueRouter);
 
@@ -28,10 +29,10 @@ const routes = [
     path: '/gastos',
     component: Expenses
   },
-  // {
-  //   path: '/gastos/detalle',
-  //   component: ExpensesDetail
-  // },
+  {
+    path: '/gastos/detalle',
+    component: ExpensesDetail
+  },
   {
     path: '/proveedores',
     component: Providers
