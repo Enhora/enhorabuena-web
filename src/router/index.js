@@ -21,13 +21,17 @@ const routes = [
     component: Sales
   },
   {
-    path: '/detalle-ventas',
+    path: '/ventas/detalle',
     component: SalesDetail
   },
   {
     path: '/gastos',
     component: Expenses
   },
+  // {
+  //   path: '/gastos/detalle',
+  //   component: ExpensesDetail
+  // },
   {
     path: '/proveedores',
     component: Providers
@@ -37,7 +41,7 @@ const routes = [
     component: Stock
   },
   {
-    path: '/stock-detail',
+    path: '/stock/detalle',
     component: StockDetail
   },
   {
