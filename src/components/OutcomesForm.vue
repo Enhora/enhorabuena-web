@@ -32,7 +32,7 @@
     <v-checkbox
       v-model="checkbox"
       :error-messages="checkboxErrors"
-      label="Alertar sobre este gasto?"
+      label="Alertar al equipo sobre este gasto."
       required
       @change="$v.checkbox.$touch()"
       @blur="$v.checkbox.$touch()"

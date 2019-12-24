@@ -9,7 +9,10 @@
       <v-divider class="mx-4" inset vertical></v-divider>
 
       <v-col cols="12" sm="12" lg="5">
-        <p class="headline text-center">Ultimos gastos</p>
+        <p class="headline text-center">
+          Ultimos gastos
+          <v-icon>mdi-arrow-top-right</v-icon>
+        </p>
         <TxTable :items="desserts" />
       </v-col>
     </v-row>
@@ -29,18 +32,18 @@ export default {
   data: () => ({
     desserts: [
       {
-        name: 'Frozen Yogurt',
-        calories: 159,
+        name: "Frozen Yogurt",
+        calories: 159
       },
       {
-        name: 'Ice cream sandwich',
-        calories: 237,
+        name: "Ice cream sandwich",
+        calories: 237
       },
       {
-        name: 'Pandorito',
-        calories: 262,
+        name: "Pandorito",
+        calories: 262
       }
-    ],
+    ]
   })
 };
 </script>

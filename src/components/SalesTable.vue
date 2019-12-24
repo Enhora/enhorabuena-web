@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: "Table",
+  name: "SalesTable",
   data() {
     return {
       headers: [

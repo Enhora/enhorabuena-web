@@ -52,7 +52,7 @@
     <v-checkbox
       v-model="checkbox"
       :error-messages="checkboxErrors"
-      label="Alertar sobre esta venta?"
+      label="Alertar al equipo sobre esta venta."
       required
       @change="$v.checkbox.$touch()"
       @blur="$v.checkbox.$touch()"
