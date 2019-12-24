@@ -4,7 +4,6 @@
     absolute
     color="#6A76AB"
     dark
-    shrink-on-scroll
     prominent
     src="https://potterandvaughn.com/files/2019/05/sock_wall.jpg?w=1060&h=795&a=t"
     fade-img-on-scroll
@@ -24,28 +23,6 @@
     </v-toolbar-title>
 
     <v-spacer></v-spacer>
-
-    <v-btn icon>
-      <v-icon>mdi-magnify</v-icon>
-    </v-btn>
-
-    <v-btn icon>
-      <v-icon>mdi-heart</v-icon>
-    </v-btn>
-
-    <v-menu bottom left>
-      <template v-slot:activator="{ on }">
-        <v-btn icon color="yellow" v-on="on">
-          <v-icon>mdi-dots-vertical</v-icon>
-        </v-btn>
-      </template>
-
-      <v-list>
-        <v-list-item v-for="(item, i) in items" :key="i">
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-menu>
 
     <template v-slot:extension>
       <v-tabs align-with-title background-color="transparent">

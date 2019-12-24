@@ -10,7 +10,7 @@
 
       <v-col cols="12" sm="12" lg="5">
         <p class="headline text-center">
-          Últimos stocks agregados
+          Items faltantes
           <v-icon to="/detalle-stock">mdi-arrow-top-right</v-icon>
         </p>
         <TxTable :items="desserts" />
