@@ -5,7 +5,9 @@ import Sales from '../views/Sales'
 import Expenses from '../views/Expenses'
 import NotFound from '../views/404'
 import Providers from '../views/Providers'
-import DetalleVentas from '../views/SalesDetail'
+import SalesDetail from '../views/SalesDetail'
+import Stock from '../views/Stock'
+import StockDetail from '../views/StockDetail'
 
 Vue.use(VueRouter);
 
@@ -19,6 +21,10 @@ const routes = [
     component: Sales
   },
   {
+    path: '/detalle-ventas',
+    component: SalesDetail
+  },
+  {
     path: '/gastos',
     component: Expenses
   },
@@ -27,8 +33,12 @@ const routes = [
     component: Providers
   },
   {
-    path: '/detalle-ventas',
-    component: DetalleVentas
+    path: '/stock',
+    component: Stock
+  },
+  {
+    path: '/stock-detail',
+    component: StockDetail
   },
   {
     path: '*',
