@@ -146,9 +146,9 @@ export default {
       this.$v.$reset();
       this.article = "";
       this.price = "";
-      this.categories = null;
-      this.payMethods = null;
-      this.fees = null;
+      this.categories = '';
+      this.payMethods = '';
+      this.fees = '';
       this.checkbox = false;
     }
   }

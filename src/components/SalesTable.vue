@@ -1,5 +1,15 @@
 <template>
-  <v-data-table :headers="headers" :items="articulos" class="elevation-1">
+  <v-data-table :headers="headers" :items="articulos" class="elevation-1" show-expand item-key="name">
+    <template v-slot:top>
+      <v-toolbar flat>
+        <v-toolbar-title>Expandable Table</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-switch v-model="singleExpand" label="Single expand" class="mt-2"></v-switch>
+      </v-toolbar>
+    </template>
+    <template v-slot:expanded-item="{ headers }">
+      <td :colspan="headers.length">Peek-a-boo!</td>
+    </template>
     <template v-slot:item.stock="{ item }">
       <v-chip :color="getColor(item.stock)" dark>{{ item.stock }}</v-chip>
     </template>

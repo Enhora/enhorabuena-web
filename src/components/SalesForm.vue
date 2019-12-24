@@ -30,13 +30,23 @@
     ></v-select>
 
     <v-select
-      v-model="fees"
+      v-model="fee"
       :items="fees"
       :error-messages="feesErrors"
       label="Cuotas"
       required
       @change="$v.fees.$touch()"
       @blur="$v.fees.$touch()"
+    ></v-select>
+
+    <v-select
+      v-model="status"
+      :items="statuses"
+      :error-messages="statusError"
+      label="Estado"
+      required
+      @change="$v.status.$touch()"
+      @blur="$v.status.$touch()"
     ></v-select>
 
     <v-select
@@ -74,7 +84,8 @@ export default {
     article: { required, maxLength: maxLength(20) },
     price: { required },
     payMethod: { required },
-    fees: { required },
+    fee: { required },
+    status: { required },
     category: { required },
     checkbox: {
       checked(val) {
@@ -86,11 +97,14 @@ export default {
   data: () => ({
     article: "",
     price: "",
-    category: null,
+    category: '',
     categories: ["Item 1", "Item 2", "Item 3", "Item 4"],
     fees: ["Item 1", "Item 2", "Item 3", "Item 4"],
+    fee: '',
     payMethods: ["Item 1", "Item 2", "Item 3", "Item 4"],
-    payMethod: null,
+    statuses: ['Pagado', 'Pago parcial', 'Impago'], // default pagado
+    status: '',
+    payMethod: '',
     checkbox: false
   }),
 
@@ -132,8 +146,14 @@ export default {
     },
     feesErrors() {
       const errors = [];
-      if (!this.$v.fees.$dirty) return errors;
-      !this.$v.fees.required && errors.push("Es necesario ingresar un valor.");
+      if (!this.$v.fee.$dirty) return errors;
+      !this.$v.fee.required && errors.push("Es necesario ingresar un valor.");
+      return errors;
+    },
+    statusError() {
+      const errors = [];
+      if (!this.$v.status.$dirty) return errors;
+      !this.$v.status.required && errors.push("Es necesario ingresar un valor.");
       return errors;
     }
   },
@@ -146,9 +166,10 @@ export default {
       this.$v.$reset();
       this.article = "";
       this.price = "";
-      this.categories = null;
-      this.payMethods = null;
-      this.fees = null;
+      this.category = '';
+      this.payMethod = '';
+      this.fee = '';
+      this.status = '';
       this.checkbox = false;
     }
   }
