@@ -11,7 +11,9 @@
       <v-col cols="12" sm="12" lg="5">
         <p class="headline text-center">
           Ultimos gastos
-          <v-icon>mdi-arrow-top-right</v-icon>
+          <v-btn icon color="indigo" to="/gastos/detalle">
+            <v-icon>mdi-arrow-top-right</v-icon>
+          </v-btn>
         </p>
         <TxTable :items="desserts" />
       </v-col>
