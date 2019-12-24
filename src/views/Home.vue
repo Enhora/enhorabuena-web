@@ -23,7 +23,7 @@
       </v-col>
 
       <v-col cols="6" md="6">
-        <v-sheet class="d-flex" color="teal lighten-3" height="350">
+        <v-sheet class="centered" color="teal lighten-3" height="350">
           <WeatherCard />
         </v-sheet>
       </v-col>
@@ -80,3 +80,10 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+  .centered {
+    display: flex;
+    align-items: center;
+  }
+</style>
