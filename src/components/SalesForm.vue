@@ -68,8 +68,8 @@
       @blur="$v.checkbox.$touch()"
     ></v-checkbox>
 
-    <v-btn class="mr-4" @click="submit">Agregar venta</v-btn>
-    <v-btn @click="clear">Limpiar</v-btn>
+    <v-btn class="mr-4" @click="submit" color="indigo" dark>Agregar venta</v-btn>
+    <v-btn @click="clear" color="indigo" dark>Limpiar</v-btn>
   </form>
 </template>
 

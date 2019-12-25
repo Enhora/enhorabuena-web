@@ -3,11 +3,13 @@
   <v-container>
     <v-row class="flex-child">
       <v-col cols="6" md="6">
-        <v-sheet class="centered" color="green lighten-3" height="350"></v-sheet>
+        <v-sheet class="centered" color="green lighten-3">
+          <StockCard />
+        </v-sheet>
       </v-col>
 
       <v-col cols="6" md="6">
-        <v-sheet class="centered" color="yellow lighten-3" height="350">
+        <v-sheet class="centered" color="yellow lighten-3">
           <NotesCard />
         </v-sheet>
       </v-col>
@@ -51,13 +53,15 @@ import SalesCard from "../components/SalesCard";
 import WeatherCard from "../components/WeatherCard";
 import TimeCard from "../components/TimeCard";
 import NotesCard from "../components/NotesCard";
+import StockCard from "../components/StockCard";
 
 export default {
   components: {
     SalesCard,
     WeatherCard,
     TimeCard,
-    NotesCard
+    NotesCard,
+    StockCard
   }
 };
 </script>

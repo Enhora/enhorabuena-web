@@ -58,8 +58,8 @@
       @blur="$v.checkbox.$touch()"
     ></v-checkbox>
 
-    <v-btn class="mr-4" @click="submit">Agregar stock</v-btn>
-    <v-btn @click="clear">Limpiar</v-btn>
+    <v-btn class="mr-4" @click="submit" color="indigo" dark>Agregar stock</v-btn>
+    <v-btn @click="clear" color="indigo" dark>Limpiar</v-btn>
   </form>
 </template>
 
@@ -146,9 +146,9 @@ export default {
       this.$v.$reset();
       this.article = "";
       this.price = "";
-      this.categories = '';
-      this.payMethods = '';
-      this.fees = '';
+      this.categories = "";
+      this.payMethods = "";
+      this.fees = "";
       this.checkbox = false;
     }
   }

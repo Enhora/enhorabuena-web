@@ -5,6 +5,7 @@
         <th class="text-left">Name</th>
         <th class="text-left">Precio</th>
         <th class="text-left">Estado</th>
+        <th class="text-left">Stock</th>
       </tr>
     </thead>
     <tbody>
@@ -12,6 +13,7 @@
         <td>{{ item.name }}</td>
         <td>{{ item.price }}</td>
         <td>{{ item.status }}</td>
+        <td>{{ item.stock }}</td>
       </tr>
     </tbody>
   </v-simple-table>

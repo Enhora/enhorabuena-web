@@ -1,8 +1,8 @@
 <template>
   <v-card class="mx-auto text-center" color="transparent" flat>
     <v-card-text>
-      <p class="font-weight-light display-1 text-center">{{ time }}</p>
-      <p class="font-weight-light text-center">{{ date }}</p>
+      <p class="font-weight-light display-3 text-center">{{ time }}</p>
+      <p class="font-weight-light display-1 text-center">{{ date }}</p>
     </v-card-text>
   </v-card>
 </template>

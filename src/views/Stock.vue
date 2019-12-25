@@ -11,9 +11,11 @@
       <v-col cols="12" sm="12" lg="5">
         <p class="headline text-center">
           Items faltantes
-          <v-icon to="/detalle-stock">mdi-arrow-top-right</v-icon>
+          <v-btn icon color="indigo" to="/stock/detalle">
+            <v-icon>mdi-arrow-top-right</v-icon>
+          </v-btn>
         </p>
-        <TxTable :items="desserts" />
+        <TxTable :items="articles.filter(x => x.stock < 300)" />
       </v-col>
     </v-row>
   </v-container>
@@ -31,55 +33,95 @@ export default {
     TxTable
   },
   data: () => ({
-    desserts: [
+    articles: [
       {
-        name: "Frozen Yogurt",
-        calories: 159,
+        name: "Medias soquete invisible",
+        stock: 159,
+        price: 260,
+        payMethod: "Efectivo",
+        fees: 0,
+        discount: "15%",
         status: "Pago"
       },
       {
-        name: "Ice cream sandwich",
-        calories: 237,
+        name: "Media caña alta",
+        stock: 237,
+        price: 190,
+        payMethod: "Efectivo",
+        fees: 0,
+        discount: "10%",
         status: "Pago"
       },
       {
-        name: "Eclair",
-        calories: 262,
+        name: "Media caña corta",
+        stock: 262,
+        price: 1634.0,
+        payMethod: "Efectivo",
+        fees: 0,
+        discount: "10%",
         status: "Pago"
       },
       {
-        name: "Cupcake",
-        calories: 305,
+        name: "Boxer hombre",
+        stock: 305,
+        price: 3344.0,
+        payMethod: "Débito",
+        fees: 0,
+        discount: "10%",
         status: "Pago"
       },
       {
-        name: "Gingerbread",
-        calories: 356,
+        name: "Boxer niño",
+        stock: 356,
+        price: 1634.0,
+        payMethod: "Crédito",
+        fees: 3,
+        discount: "0%",
         status: "Pago"
       },
       {
-        name: "Jelly bean",
-        calories: 375,
+        name: "Slip hombre",
+        stock: 3759.0,
+        price: 500.0,
+        payMethod: "Débito",
+        fees: 0,
+        discount: "0%",
         status: "Pago"
       },
       {
-        name: "Lollipop",
-        calories: 392,
+        name: "Slip niño",
+        stock: 392,
+        price: 1000,
+        payMethod: "Débito",
+        fees: 0,
+        discount: "10%",
         status: "Pago"
       },
       {
-        name: "Honeycomb",
-        calories: 408,
+        name: "Sombrero Bowler",
+        stock: 408,
+        price: 302,
+        payMethod: "Débito",
+        fees: 0,
+        discount: "45%",
         status: "Pago"
       },
       {
-        name: "Donut",
-        calories: 452,
+        name: "Sombrero Fedora",
+        stock: 4523.0,
+        price: 250.6,
+        payMethod: "Crédito",
+        fees: 6,
+        discount: "20%",
         status: "Pago"
       },
       {
-        name: "KitKat",
-        calories: 518,
+        name: "Sombrero bombin",
+        stock: 518,
+        price: 1426.0,
+        payMethod: "Crédito",
+        fees: 6,
+        discount: "0%",
         status: "Pago"
       }
     ]
